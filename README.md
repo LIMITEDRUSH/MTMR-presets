@@ -1347,3 +1347,18 @@ This preset requires "matchAppId" and will not work with the current v.0.27.0 re
 - Toggle network locations
 - Quit/reload MTMR button
 
+---
+
+[@facundobianco preset](facundobianco/items.json)
+
+![](facundobianco/main.png)
+![](facundobianco/group.png)
+
+Features:
+
+- [MuteDeck](https://mutedeck.com) integration
+- Apple Shortcuts integration
+- Enhanced with keys rarely found on multimedia keyboards, including _Mission Control_, _Launchpad_, screenshot, and lock functions
+
+
+All icons are sourced from Apple SF Symbols and MuteDeck.

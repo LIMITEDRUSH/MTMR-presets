@@ -1,0 +1,266 @@
+[
+  {
+    "type": "brightnessDown",
+    "width": 50,
+    "align": "left"
+  },
+  {
+    "type": "brightnessUp",
+    "width": 50,
+    "align": "left"
+  },
+  {
+    "type": "staticButton",
+    "title": "",
+    "image": {
+      "filePath": "~/Library/Application Support/MTMR/rectangle.3.group.fill.svg"
+    },
+    "width": 50,
+    "align": "left",
+    "action": "keyPress",
+    "keycode": 160
+  },
+  {
+    "type": "staticButton",
+    "title": "",
+    "image": {
+      "filePath": "~/Library/Application Support/MTMR/rectangle.grid.3x2.fill.svg"
+    },
+    "width": 50,
+    "align": "left",
+    "action": "keyPress",
+    "keycode": 131
+  },
+  {
+    "type": "group",
+    "align": "left",
+    "title": "App",
+    "width": 50,
+    "items": [
+      {
+        "type": "close",
+        "align": "left",
+        "width": 50
+      },
+      {
+        "type": "staticButton",
+        "align": "left",
+        "width": 50,
+        "title": "",
+        "image": {
+          "filePath": "~/Library/Application Support/MTMR/checklist.svg"
+        },
+        "action": "shellScript",
+        "executablePath": "/bin/bash",
+        "shellArguments": [
+          "-c",
+          "shortcuts run \"Todoist capture improve\""
+        ]
+      },
+      {
+        "type": "staticButton",
+        "align": "left",
+        "width": 50,
+        "title": "",
+        "image": {
+          "filePath": "~/Library/Application Support/MTMR/timer.svg"
+        },
+        "action": "shellScript",
+        "executablePath": "/bin/bash",
+        "shellArguments": [
+          "-c",
+          "shortcuts run \"Todoist - Waiting For\""
+        ]
+      },
+      {
+        "type": "staticButton",
+        "align": "left",
+        "width": 50,
+        "title": "",
+        "image": {
+          "filePath": "~/Library/Application Support/MTMR/text.viewfinder.svg"
+        },
+        "action": "shellScript",
+        "executablePath": "/bin/bash",
+        "shellArguments": [
+          "-c",
+          "osascript -e 'tell application \"System Events\" to key code 19 using {shift down, command down}'"
+        ]
+      },
+      {
+        "type": "staticButton",
+        "align": "left",
+        "width": 50,
+        "title": "",
+        "image": {
+          "filePath": "~/Library/Application Support/MTMR/moon.fill.svg"
+        },
+        "action": "shellScript",
+        "executablePath": "/bin/bash",
+        "shellArguments": [
+          "-c",
+          "shortcuts run \"Toggle DND for 30m\""
+        ]
+      },
+      {
+        "type": "dock",
+        "align": "right",
+        "bordered": false,
+        "width": 600
+      }
+    ]
+  },
+  {
+    "type": "appleScriptTitledButton",
+    "align": "right",
+    "width": 50,
+    "bordered": true,
+    "background": "#444444",
+    "refreshInterval": 0.5,
+    "source": {
+      "inline": "set title to \"​\"\rset callStatus to do shell script \"curl -s -X GET 'http://localhost:3491/v1/status' -H 'accept: application/json' | jq -r '.call'\"\rset val to {title, callStatus}\rreturn val"
+    },
+    "alternativeImages": {
+      "active": {
+        "filePath": "~/Library/Application Support/MTMR/bring-to-front@2x.png"
+      },
+      "inactive": {
+        "filePath": "~/Library/Application Support/MTMR/bring-to-front-disabled@2x.png"
+      }
+    },
+    "action": "shellScript",
+    "executablePath": "/usr/bin/curl",
+    "shellArguments": [
+      "-X POST",
+      "-H accept: application/json",
+      "http://localhost:3491/v1/bring-to-front"
+    ]
+  },
+  {
+    "type": "appleScriptTitledButton",
+    "align": "right",
+    "width": 50,
+    "bordered": true,
+    "background": "#444444",
+    "refreshInterval": 0.5,
+    "source": {
+      "inline": "set title to \"​\"\rset callStatus to do shell script \"curl -s -X GET 'http://localhost:3491/v1/status' -H 'accept: application/json' | jq -r '.mute'\"\rset val to {title, callStatus}\rreturn val"
+    },
+    "alternativeImages": {
+      "active": {
+        "filePath": "~/Library/Application Support/MTMR/muted@2x.png"
+      },
+      "inactive": {
+        "filePath": "~/Library/Application Support/MTMR/microphone-solid@2x.png"
+      },
+      "disabled": {
+        "filePath": "~/Library/Application Support/MTMR/microphone-disabled@2x.png"
+      }
+    },
+    "action": "shellScript",
+    "executablePath": "/usr/bin/curl",
+    "shellArguments": [
+      "-X POST",
+      "-H accept: application/json",
+      "http://localhost:3491/v1/mute?state=toggle"
+    ]
+  },
+  {
+    "type": "appleScriptTitledButton",
+    "align": "right",
+    "width": 50,
+    "bordered": true,
+    "background": "#444444",
+    "refreshInterval": 0.5,
+    "source": {
+      "inline": "set title to \"​\"\rset callStatus to do shell script \"curl -s -X GET 'http://localhost:3491/v1/status' -H 'accept: application/json' | jq -r '.video'\"\rset val to {title, callStatus}\rreturn val"
+    },
+    "alternativeImages": {
+      "active": {
+        "filePath": "~/Library/Application Support/MTMR/video-solid@2x.png"
+      },
+      "inactive": {
+        "filePath": "~/Library/Application Support/MTMR/video-stopped@2x.png"
+      },
+      "disabled": {
+        "filePath": "~/Library/Application Support/MTMR/video-disabled@2x.png"
+      }
+    },
+    "action": "shellScript",
+    "executablePath": "/usr/bin/curl",
+    "shellArguments": [
+      "-X POST",
+      "-H accept: application/json",
+      "http://localhost:3491/v1/video?state=toggle"
+    ]
+  },
+  {
+    "type": "mute",
+    "align": "right",
+    "width": 50
+  },
+  {
+    "type": "volumeDown",
+    "align": "right",
+    "width": 50
+  },
+  {
+    "type": "volumeUp",
+    "align": "right",
+    "width": 50
+  },
+  {
+    "type": "staticButton",
+    "title": "Hm",
+    "width": 50,
+    "align": "right",
+    "action": "keyPress",
+    "keycode": 115
+  },
+  {
+    "type": "staticButton",
+    "title": "End",
+    "width": 50,
+    "align": "right",
+    "action": "keyPress",
+    "keycode": 119
+  },
+  {
+    "type": "staticButton",
+    "title": "Del",
+    "width": 50,
+    "align": "right",
+    "action": "keyPress",
+    "keycode": 117
+  },
+  {
+    "type": "staticButton",
+    "align": "right",
+    "width": 50,
+    "title": "",
+    "image": {
+      "filePath": "~/Library/Application Support/MTMR/rectangle.dashed.svg"
+    },
+    "action": "shellScript",
+    "executablePath": "/bin/bash",
+    "shellArguments": [
+      "-c",
+      "screencapture -xi ~/Pictures/`date +%s`.png"
+    ]
+  },
+  {
+    "type": "staticButton",
+    "align": "right",
+    "width": 50,
+    "title": "",
+    "image": {
+      "filePath": "~/Library/Application Support/MTMR/lock.fill.svg"
+    },
+    "action": "shellScript",
+    "executablePath": "/bin/bash",
+    "shellArguments": [
+      "-c",
+      "osascript -e 'tell application \"System Events\" to keystroke \"q\" using {control down, command down}'"
+    ]
+  }
+]
