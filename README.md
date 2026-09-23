@@ -1362,3 +1362,14 @@ Features:
 
 
 All icons are sourced from Apple SF Symbols and MuteDeck.
+
+---
+
+## [@LIMITEDRUSH Codex Touch Bar](LIMITEDRUSH/README.md)
+
+![Codex Touch Bar](LIMITEDRUSH/codex-touchbar.png)
+
+- Apple-style, Codex-only Touch Bar for MTMR 2026 on Apple silicon.
+- Animated Clawd pet with interactive reactions and switchable status messages.
+- Live TokenTracker daily tokens/cost plus Codex quota and reset time.
+- Includes the ready-to-use preset and the complete Swift source patch.
