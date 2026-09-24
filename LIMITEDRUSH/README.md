@@ -9,11 +9,13 @@ their native Apple Touch Bar.
 ## Features
 
 - Native-style monochrome shortcut buttons.
-- Animated Clawd pet with tap, double-tap, and long-press reactions.
+- Animated Clawd pet with TokenTracker's eleven-state interaction sequence,
+  plus automatic idle reactions, double-tap, and long-press feedback.
 - Live daily token count and estimated cost from TokenTracker, with a local
   Codex session-log fallback.
-- Tap the center message bubble to switch between daily usage and the seven-day
-  Codex quota; the pet changes pose with the page.
+- Tap the wider center speech bubble to cycle through the full TokenTracker-style
+  pool: today, 7-day and 30-day totals, active days, conversations, quota status,
+  usage-sensitive reactions, and personality messages. Clawd changes pose too.
 - Remaining-quota progress bar and next reset time, read live from the locally
   authenticated Codex app server every 10 seconds.
 - Keyboard-combination actions for Codex shortcuts.
@@ -45,8 +47,10 @@ their native Apple Touch Bar.
 
 5. Grant the built app Accessibility permission in System Settings.
 
-TokenTracker is optional. When its local usage API is available, MTMR uses it
-for the daily token and cost totals; otherwise it reads local Codex session
-logs. Quota data never falls back to stale logs: if the live Codex app server
-request fails, the quota widget shows an unavailable state. No credentials,
-signing certificates, or private account data are included in this preset.
+TokenTracker is optional. When its local usage API is available, MTMR uses its
+today and rolling-summary data so the Touch Bar matches TokenTracker's own
+companion messages; otherwise it reads local Codex session logs for today's
+tokens and cost. Quota data never falls back to stale logs: if the live Codex
+app server request fails, the quota widget shows an unavailable state. No
+credentials, signing certificates, or private account data are included in
+this preset.
