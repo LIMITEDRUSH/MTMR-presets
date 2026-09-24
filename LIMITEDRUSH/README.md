@@ -14,7 +14,8 @@ their native Apple Touch Bar.
   Codex session-log fallback.
 - Tap the center message bubble to switch between daily usage and the seven-day
   Codex quota; the pet changes pose with the page.
-- Remaining-quota progress bar and next reset time, refreshed every 30 seconds.
+- Remaining-quota progress bar and next reset time, read live from the locally
+  authenticated Codex app server every 10 seconds.
 - Keyboard-combination actions for Codex shortcuts.
 
 ## Files
@@ -46,5 +47,6 @@ their native Apple Touch Bar.
 
 TokenTracker is optional. When its local usage API is available, MTMR uses it
 for the daily token and cost totals; otherwise it reads local Codex session
-logs. No credentials, signing certificates, or private account data are
-included in this preset.
+logs. Quota data never falls back to stale logs: if the live Codex app server
+request fails, the quota widget shows an unavailable state. No credentials,
+signing certificates, or private account data are included in this preset.
