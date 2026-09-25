@@ -1,4 +1,17 @@
-# My TouchBar My Rules Presets
+# Touch Bar for Codex
+
+An Apple-style Codex control surface for MacBook Pro Touch Bar, powered by a
+native Apple-silicon build of MTMR. It includes Codex shortcuts, the animated
+TokenTracker Clawd companion, live token/cost messages, remaining quota, and
+the next reset time.
+
+![Touch Bar for Codex](LIMITEDRUSH/codex-touchbar.png)
+
+[Setup, features, and source patch](LIMITEDRUSH/README.md)
+
+---
+
+## Original MTMR preset archive
 
 Here we collect cool touch bar presets for [MTMR](https://github.com/toxblh/mtmr). Feel free to send your own configs in pull-requests. Do not forget to attach a screenshot (⇧⌘6) and write some description to this README.
 
