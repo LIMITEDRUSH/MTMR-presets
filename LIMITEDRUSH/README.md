@@ -9,13 +9,16 @@ their native Apple Touch Bar.
 ## Features
 
 - Native-style monochrome shortcut buttons.
-- Animated Clawd pet with TokenTracker's eleven-state interaction sequence,
+- Animated Clawd pet with all 20 official TokenTracker states and all five
+  physical reactions (jump, wiggle, flip, multi-blink, and wave),
   plus automatic idle reactions, double-tap, and long-press feedback.
 - Live daily token count and estimated cost from TokenTracker, with a local
   Codex session-log fallback.
 - Tap the wider center speech bubble to cycle through the full TokenTracker-style
   pool: today, 7-day and 30-day totals, active days, conversations, quota status,
-  usage-sensitive reactions, and personality messages. Clawd changes pose too.
+  usage-sensitive reactions, and personality messages. Clawd changes pose,
+  props, and outfits too, including the wizard hat and staff, juggling balls,
+  typing particles, ultrathink effects, overheating, sleep/wake, and mini modes.
 - Remaining-quota progress bar and next reset time, read live from the locally
   authenticated Codex app server every 10 seconds.
 - Keyboard-combination actions for Codex shortcuts.
